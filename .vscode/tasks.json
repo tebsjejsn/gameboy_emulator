@@ -1,0 +1,25 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Build",
+            "type": "shell",
+            "command": "cmake --build build --config Release",
+            "problemMatcher": []
+        },
+        {
+            "label": "Run in external terminal",
+            "type": "shell",
+            "command": "Start-Process",
+            "args": [
+                "cmd",
+                "-ArgumentList",
+                "'/k', 'build\\Release\\gameboy.exe'",
+                "-WorkingDirectory",
+                "${workspaceFolder}"
+            ],
+            "dependsOn": "Build",
+            "problemMatcher": []
+        }
+    ]
+}

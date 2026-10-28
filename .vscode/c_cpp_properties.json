@@ -1,0 +1,13 @@
+{
+  "configurations": [
+    {
+      "name": "Win32",
+      "includePath": [
+        "${workspaceFolder}/**",
+        "C:/vcpkg/installed/x64-windows/include"
+      ],
+      "cppStandard": "c++17"
+    }
+  ],
+  "version": 4
+}

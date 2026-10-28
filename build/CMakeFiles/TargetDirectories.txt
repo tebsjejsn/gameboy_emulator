@@ -1,0 +1,3 @@
+C:/Users/tejpa/gameboy/build/CMakeFiles/gameboy.dir
+C:/Users/tejpa/gameboy/build/CMakeFiles/ALL_BUILD.dir
+C:/Users/tejpa/gameboy/build/CMakeFiles/ZERO_CHECK.dir

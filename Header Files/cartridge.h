@@ -6,9 +6,8 @@ extern bool cartridge_loaded;
 
 struct cart_header_struct {
   uint8_t entry_point[4];
-  uint8_t nintendo_logo[30];
-  uint8_t title[10];
-  uint8_t cgb_flag;
+  uint8_t nintendo_logo[0x30];
+  uint8_t title[16];
   uint8_t new_licensee_code[2];
   uint8_t sgb_flag;
   uint8_t cartridge_type;
