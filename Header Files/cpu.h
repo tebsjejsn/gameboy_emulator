@@ -57,6 +57,8 @@ class gb_cpu_instructions {
         void* execute;
 };
 
+typedef void (*cpu_execute_op)();
+
 extern gb_cpu_registers cpu_registers;
 extern const gb_cpu_instructions cpu_instructions[256] = {
     // 0x00 - 0x0F

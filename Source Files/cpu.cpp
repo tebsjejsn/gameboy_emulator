@@ -287,6 +287,10 @@ void gb_cpu_registers::cpu_reset() {
     pc = 0x0100;
 }
 
+/*
+    START FROM LINE 297
+*/
+
 void gb_cpu_registers::cpu_fetch() {
     cpu_current_opcode = cartridge_data[pc++];
     const gb_cpu_instructions& instruction = cpu_instructions[cpu_current_opcode];
@@ -297,7 +301,7 @@ void gb_cpu_registers::cpu_execute() {
     if (!cpu_current_instruction_execute) {
         const gb_cpu_instructions& instruction = cpu_instructions[cpu_current_opcode];
         const uint8_t pchi = ((pc - 1) & 0xFF00) >> 8;
-        const uint8_t pclo = ((pc - 1) & 0xFF00);
+        const uint8_t pclo = ((pc - 1) & 0x00FF);
         printf("Unknown instrction at %.2X%.2X (%s), count %i\n", pchi, pclo, instruction.disassembly, cpu_instruction_counter);
     }
 }
